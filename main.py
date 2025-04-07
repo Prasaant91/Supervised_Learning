@@ -1,4 +1,5 @@
 from anamoly_detector import GenericAnomalyDetector
+import pandas as pd
 
 def main():
     detector = GenericAnomalyDetector("data/Generated_synthetic_manufacturing_data.csv")
