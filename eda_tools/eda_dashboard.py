@@ -41,7 +41,7 @@ app.layout = html.Div([
     Input("feature-dropdown", "value")
 )
 def update_plots(selected_feature):
-    # Histogram with KDE line
+
     hist = go.Figure()
     hist.add_trace(go.Histogram(x=df[selected_feature], nbinsx=50, name='Histogram', marker_color='lightblue', opacity=0.75))
     hist.add_trace(go.Scatter(x=sorted(df[selected_feature]),

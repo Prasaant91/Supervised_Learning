@@ -1,6 +1,12 @@
-import pandas as pd
 import matplotlib.pyplot as plt
+from sklearn.preprocessing import OneHotEncoder, StandardScaler
+from sklearn.impute import SimpleImputer
+from sklearn.compose import ColumnTransformer
+from sklearn.pipeline import Pipeline
+from sklearn.model_selection import train_test_split
+import pandas as pd
 import seaborn as sns
+import joblib
 
 file_path = "data/Generated_synthetic_manufacturing_data.csv"
 df = pd.read_csv(file_path)
@@ -20,3 +26,4 @@ plt.title("Distribution of cost per kg")
 plt.xlabel("Cost per kg")
 plt.tight_layout()
 plt.show()
+
